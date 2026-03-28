@@ -9,14 +9,6 @@ An end-to-end Hindi ASR research codebase built around four assignment-style wor
 
 The repository is organized so each question can be run independently while sharing a consistent project structure. The later Q3 and Q4 pipelines are fully standalone and do not depend on the Whisper training flow.
 
-## Suggested Repository Name
-
-`hindi-asr-eval-toolkit`
-
-## Suggested Repository Description
-
-Production-oriented Hindi ASR toolkit covering Whisper fine-tuning, post-processing, spelling validation, and lattice-based WER evaluation for noisy conversational transcripts.
-
 ## Highlights
 
 - Hindi Whisper-small fine-tuning with preprocessing, filtering, evaluation, and report generation
