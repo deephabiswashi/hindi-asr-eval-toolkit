@@ -1,0 +1,8 @@
+{
+  "mode": "q2_only",
+  "debug_mode": false,
+  "training_samples": 5000,
+  "q2_cleaned_samples": 5000,
+  "q2_number_examples": 5,
+  "q2_english_tagging_examples": 5
+}

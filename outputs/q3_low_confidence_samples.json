@@ -1,0 +1,452 @@
+[
+  {
+    "word": "नुसार",
+    "label": "correct_spelling",
+    "confidence": "low",
+    "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+    "normalized_word": "नुसार",
+    "source": "plausible_unknown",
+    "suggestion": null
+  },
+  {
+    "word": "अवलेबल",
+    "label": "correct_spelling",
+    "confidence": "low",
+    "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+    "normalized_word": "अवलेबल",
+    "source": "plausible_unknown",
+    "suggestion": null
+  },
+  {
+    "word": "पोएटरी",
+    "label": "correct_spelling",
+    "confidence": "low",
+    "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+    "normalized_word": "पोएटरी",
+    "source": "plausible_unknown",
+    "suggestion": null
+  },
+  {
+    "word": "आई_ए_यस",
+    "label": "incorrect_spelling",
+    "confidence": "low",
+    "reason": "Suspicious Hindi character pattern: punctuation_contamination.",
+    "normalized_word": "आईएयस",
+    "source": "invalid_pattern",
+    "suggestion": null
+  },
+  {
+    "word": "लेजन",
+    "label": "incorrect_spelling",
+    "confidence": "low",
+    "reason": "Edit distance match with common Hindi word 'लेकिन'.",
+    "normalized_word": "लेजन",
+    "source": "near_dictionary_match",
+    "suggestion": "लेकिन"
+  },
+  {
+    "word": "रिजैक्ट",
+    "label": "correct_spelling",
+    "confidence": "low",
+    "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+    "normalized_word": "रिजैक्ट",
+    "source": "plausible_unknown",
+    "suggestion": null
+  },
+  {
+    "word": "आयू",
+    "label": "incorrect_spelling",
+    "confidence": "low",
+    "reason": "Edit distance match with common Hindi word 'आज'.",
+    "normalized_word": "आयू",
+    "source": "near_dictionary_match",
+    "suggestion": "आज"
+  },
+  {
+    "word": "रजीशों",
+    "label": "correct_spelling",
+    "confidence": "low",
+    "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+    "normalized_word": "रजीशों",
+    "source": "plausible_unknown",
+    "suggestion": null
+  },
+  {
+    "word": "प्रैशर",
+    "label": "correct_spelling",
+    "confidence": "low",
+    "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+    "normalized_word": "प्रैशर",
+    "source": "plausible_unknown",
+    "suggestion": null
+  },
+  {
+    "word": "इंगेंजिमेंट",
+    "label": "correct_spelling",
+    "confidence": "low",
+    "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+    "normalized_word": "इंगेंजिमेंट",
+    "source": "plausible_unknown",
+    "suggestion": null
+  },
+  {
+    "word": "वड़ापाव",
+    "label": "correct_spelling",
+    "confidence": "low",
+    "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+    "normalized_word": "वड़ापाव",
+    "source": "plausible_unknown",
+    "suggestion": null
+  },
+  {
+    "word": "हंह",
+    "label": "incorrect_spelling",
+    "confidence": "low",
+    "reason": "Edit distance match with common Hindi word 'हूँ'.",
+    "normalized_word": "हंह",
+    "source": "near_dictionary_match",
+    "suggestion": "हूँ"
+  },
+  {
+    "word": ",जिसके",
+    "label": "incorrect_spelling",
+    "confidence": "low",
+    "reason": "Suspicious Hindi character pattern: punctuation_contamination.",
+    "normalized_word": "जिसके",
+    "source": "invalid_pattern",
+    "suggestion": null
+  },
+  {
+    "word": "औसा",
+    "label": "incorrect_spelling",
+    "confidence": "low",
+    "reason": "Edit distance match with common Hindi word 'उसका'.",
+    "normalized_word": "औसा",
+    "source": "near_dictionary_match",
+    "suggestion": "उसका"
+  },
+  {
+    "word": "चुपकेचुपके",
+    "label": "correct_spelling",
+    "confidence": "low",
+    "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+    "normalized_word": "चुपकेचुपके",
+    "source": "plausible_unknown",
+    "suggestion": null
+  },
+  {
+    "word": "वावत",
+    "label": "incorrect_spelling",
+    "confidence": "low",
+    "reason": "Edit distance match with common Hindi word 'रात'.",
+    "normalized_word": "वावत",
+    "source": "near_dictionary_match",
+    "suggestion": "रात"
+  },
+  {
+    "word": "शासन",
+    "label": "incorrect_spelling",
+    "confidence": "low",
+    "reason": "Edit distance match with common Hindi word 'शाम'.",
+    "normalized_word": "शासन",
+    "source": "near_dictionary_match",
+    "suggestion": "शाम"
+  },
+  {
+    "word": "ऐसेेे",
+    "label": "incorrect_spelling",
+    "confidence": "low",
+    "reason": "Suspicious Hindi character pattern: consecutive_matras, repeated_diacritic.",
+    "normalized_word": "ऐसेेे",
+    "source": "invalid_pattern",
+    "suggestion": null
+  },
+  {
+    "word": "ईवेन",
+    "label": "incorrect_spelling",
+    "confidence": "low",
+    "reason": "Edit distance match with common Hindi word 'वे'.",
+    "normalized_word": "ईवेन",
+    "source": "near_dictionary_match",
+    "suggestion": "वे"
+  },
+  {
+    "word": "टिग",
+    "label": "incorrect_spelling",
+    "confidence": "low",
+    "reason": "Edit distance match with common Hindi word 'किस'.",
+    "normalized_word": "टिग",
+    "source": "near_dictionary_match",
+    "suggestion": "किस"
+  },
+  {
+    "word": "पड़िवर्तन",
+    "label": "correct_spelling",
+    "confidence": "low",
+    "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+    "normalized_word": "पड़िवर्तन",
+    "source": "plausible_unknown",
+    "suggestion": null
+  },
+  {
+    "word": "जूझेगा",
+    "label": "correct_spelling",
+    "confidence": "low",
+    "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+    "normalized_word": "जूझेगा",
+    "source": "plausible_unknown",
+    "suggestion": null
+  },
+  {
+    "word": "क्रेज...",
+    "label": "incorrect_spelling",
+    "confidence": "low",
+    "reason": "Suspicious Hindi character pattern: punctuation_contamination.",
+    "normalized_word": "क्रेज",
+    "source": "invalid_pattern",
+    "suggestion": null
+  },
+  {
+    "word": "कहींभी",
+    "label": "incorrect_spelling",
+    "confidence": "low",
+    "reason": "Edit distance match with common Hindi word 'कहीं'.",
+    "normalized_word": "कहींभी",
+    "source": "near_dictionary_match",
+    "suggestion": "कहीं"
+  },
+  {
+    "word": "शिमला",
+    "label": "correct_spelling",
+    "confidence": "low",
+    "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+    "normalized_word": "शिमला",
+    "source": "plausible_unknown",
+    "suggestion": null
+  },
+  {
+    "word": "श्रीमत",
+    "label": "correct_spelling",
+    "confidence": "low",
+    "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+    "normalized_word": "श्रीमत",
+    "source": "plausible_unknown",
+    "suggestion": null
+  },
+  {
+    "word": "जौनपूर।तो",
+    "label": "correct_spelling",
+    "confidence": "low",
+    "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+    "normalized_word": "जौनपूर।तो",
+    "source": "plausible_unknown",
+    "suggestion": null
+  },
+  {
+    "word": "है,दोस्त",
+    "label": "incorrect_spelling",
+    "confidence": "low",
+    "reason": "Suspicious Hindi character pattern: punctuation_contamination.",
+    "normalized_word": "हैदोस्त",
+    "source": "invalid_pattern",
+    "suggestion": null
+  },
+  {
+    "word": "बनसात",
+    "label": "incorrect_spelling",
+    "confidence": "low",
+    "reason": "Edit distance match with common Hindi word 'बात'.",
+    "normalized_word": "बनसात",
+    "source": "near_dictionary_match",
+    "suggestion": "बात"
+  },
+  {
+    "word": "डियेवी",
+    "label": "correct_spelling",
+    "confidence": "low",
+    "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+    "normalized_word": "डियेवी",
+    "source": "plausible_unknown",
+    "suggestion": null
+  },
+  {
+    "word": "गोलेट",
+    "label": "correct_spelling",
+    "confidence": "low",
+    "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+    "normalized_word": "गोलेट",
+    "source": "plausible_unknown",
+    "suggestion": null
+  },
+  {
+    "word": "फहहराया",
+    "label": "correct_spelling",
+    "confidence": "low",
+    "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+    "normalized_word": "फहहराया",
+    "source": "plausible_unknown",
+    "suggestion": null
+  },
+  {
+    "word": "प्योरली",
+    "label": "correct_spelling",
+    "confidence": "low",
+    "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+    "normalized_word": "प्योरली",
+    "source": "plausible_unknown",
+    "suggestion": null
+  },
+  {
+    "word": "टोपर",
+    "label": "incorrect_spelling",
+    "confidence": "low",
+    "reason": "Edit distance match with common Hindi word 'पर'.",
+    "normalized_word": "टोपर",
+    "source": "near_dictionary_match",
+    "suggestion": "पर"
+  },
+  {
+    "word": ".क्योंकि",
+    "label": "incorrect_spelling",
+    "confidence": "low",
+    "reason": "Suspicious Hindi character pattern: punctuation_contamination.",
+    "normalized_word": "क्योंकि",
+    "source": "invalid_pattern",
+    "suggestion": null
+  },
+  {
+    "word": "विजित",
+    "label": "correct_spelling",
+    "confidence": "low",
+    "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+    "normalized_word": "विजित",
+    "source": "plausible_unknown",
+    "suggestion": null
+  },
+  {
+    "word": "ख़ाके",
+    "label": "correct_spelling",
+    "confidence": "low",
+    "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+    "normalized_word": "ख़ाके",
+    "source": "plausible_unknown",
+    "suggestion": null
+  },
+  {
+    "word": "खुलवाके",
+    "label": "correct_spelling",
+    "confidence": "low",
+    "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+    "normalized_word": "खुलवाके",
+    "source": "plausible_unknown",
+    "suggestion": null
+  },
+  {
+    "word": "अंतरजाती",
+    "label": "correct_spelling",
+    "confidence": "low",
+    "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+    "normalized_word": "अंतरजाती",
+    "source": "plausible_unknown",
+    "suggestion": null
+  },
+  {
+    "word": "खाएंगे,",
+    "label": "incorrect_spelling",
+    "confidence": "low",
+    "reason": "Suspicious Hindi character pattern: punctuation_contamination.",
+    "normalized_word": "खाएंगे",
+    "source": "invalid_pattern",
+    "suggestion": null
+  },
+  {
+    "word": "विखास",
+    "label": "incorrect_spelling",
+    "confidence": "low",
+    "reason": "Edit distance match with common Hindi word 'लिखाई'.",
+    "normalized_word": "विखास",
+    "source": "near_dictionary_match",
+    "suggestion": "लिखाई"
+  },
+  {
+    "word": "गिट्टियां",
+    "label": "correct_spelling",
+    "confidence": "low",
+    "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+    "normalized_word": "गिट्टियां",
+    "source": "plausible_unknown",
+    "suggestion": null
+  },
+  {
+    "word": "कचहरी",
+    "label": "correct_spelling",
+    "confidence": "low",
+    "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+    "normalized_word": "कचहरी",
+    "source": "plausible_unknown",
+    "suggestion": null
+  },
+  {
+    "word": "जी,मैम",
+    "label": "incorrect_spelling",
+    "confidence": "low",
+    "reason": "Suspicious Hindi character pattern: punctuation_contamination.",
+    "normalized_word": "जीमैम",
+    "source": "invalid_pattern",
+    "suggestion": null
+  },
+  {
+    "word": "स्टेशन,",
+    "label": "incorrect_spelling",
+    "confidence": "low",
+    "reason": "Suspicious Hindi character pattern: punctuation_contamination.",
+    "normalized_word": "स्टेशन",
+    "source": "invalid_pattern",
+    "suggestion": null
+  },
+  {
+    "word": "फुट-",
+    "label": "incorrect_spelling",
+    "confidence": "low",
+    "reason": "Edit distance match with common Hindi word 'खुश'.",
+    "normalized_word": "फुट",
+    "source": "near_dictionary_match",
+    "suggestion": "खुश"
+  },
+  {
+    "word": "चस्मीश",
+    "label": "correct_spelling",
+    "confidence": "low",
+    "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+    "normalized_word": "चस्मीश",
+    "source": "plausible_unknown",
+    "suggestion": null
+  },
+  {
+    "word": "गोलकीपर्स",
+    "label": "correct_spelling",
+    "confidence": "low",
+    "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+    "normalized_word": "गोलकीपर्स",
+    "source": "plausible_unknown",
+    "suggestion": null
+  },
+  {
+    "word": "सरह",
+    "label": "incorrect_spelling",
+    "confidence": "low",
+    "reason": "Edit distance match with common Hindi word 'घर'.",
+    "normalized_word": "सरह",
+    "source": "near_dictionary_match",
+    "suggestion": "घर"
+  },
+  {
+    "word": "लिखीं",
+    "label": "incorrect_spelling",
+    "confidence": "low",
+    "reason": "Edit distance match with common Hindi word 'लिखाई'.",
+    "normalized_word": "लिखीं",
+    "source": "near_dictionary_match",
+    "suggestion": "लिखाई"
+  }
+]

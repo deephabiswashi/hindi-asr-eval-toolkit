@@ -1,0 +1,686 @@
+{
+  "results": {
+    "debug_mode": false,
+    "reuse_artifacts_enabled": true,
+    "training_mode": "fresh_fine_tune_from_base",
+    "model_output_dir": "models\\whisper-ft-fresh",
+    "training_samples": 5000,
+    "baseline_segment_wer": 2.4794877403702746,
+    "fleurs_baseline_wer": 0.8415657946114798,
+    "fleurs_fine_tuned_wer": 0.8508395158141351,
+    "fleurs_fine_tuned_wer_before_fix": 3.508688012495119,
+    "fleurs_fine_tuned_wer_after_fix": 0.8508395158141351,
+    "valid_training_baseline_predictions": 5000,
+    "valid_fleurs_baseline_predictions": 418,
+    "valid_fleurs_fine_tuned_predictions": 418,
+    "valid_fleurs_fine_tuned_predictions_before_fix": 418,
+    "valid_fleurs_fine_tuned_predictions_after_fix": 418,
+    "before_skipped_samples": 0,
+    "after_skipped_samples": 0,
+    "before_vs_after_improvement": 2.657848496680984,
+    "q2_cleaned_samples": 5000,
+    "q2_number_examples": 5,
+    "q2_english_tagging_examples": 5
+  },
+  "sampling_strategy": "The 25 examples were selected by uniform interval sampling over the full error list, not by manual cherry-picking. The pipeline first keeps every evaluation pair where prediction and reference differ, computes a fixed stride of floor(total_errors / 25), and then returns every stride-th error from that ordered list. This spreads the sample across the evaluation set and makes it less likely that the report over-focuses on any single utterance, topic, or failure mode.",
+  "wer_diagnosis": "The fine-tuned model performs worse than the pretrained baseline because it appears to overfit to the Josh Talks training distribution. The training data is conversational, disfluent, and relatively small, while Hindi FLEURS test is cleaner read speech. The sampled errors show decoder loops, long hallucinated tails, and domain-mismatched substitutions, which means the model learned the training-set style but lost some of the pretrained model's broader generalization. In short: training loss improved, but cross-domain robustness degraded.",
+  "taxonomy": {
+    "Rare content-word confusion": {
+      "count": 12,
+      "examples": [
+        {
+          "index": 16,
+          "reference": "ब्रह्मांड की सभी वस्तुएं पदार्थ से बनी हैं सारे पदार्थ सूक्ष्तम कणों से बनें हैं जिन्हें अणु कहा जाता है",
+          "prediction": "ब्रमहान की सभी वस्तुयें पधार्थ से बनी है सारे प्रदारित सुक्ष्तम कारों से मने है जिने अनू का कहा जाता हैं आप तो इसलिए लेकिन ना उसले",
+          "error_tag": "rare_word_swap",
+          "reason": "The sentence frame is preserved, but one or two long content words are replaced with acoustically plausible alternatives.",
+          "metrics": {
+            "ref_tokens": 20,
+            "pred_tokens": 27,
+            "token_edit_distance": 19,
+            "token_wer_proxy": 0.95,
+            "char_edit_ratio": 0.5529411764705883,
+            "length_ratio": 1.35,
+            "overlap_ratio": 0.5,
+            "repeated_token_ratio": 0.0,
+            "max_token_run": 1,
+            "max_ngram_repeat": 1,
+            "digit_mismatch": false,
+            "max_unmatched_ref_token_length": 9,
+            "max_unmatched_pred_token_length": 8
+          }
+        },
+        {
+          "index": 14,
+          "reference": "पुलिस अधीक्षक चंद्र शेखर सोलंकी ने कहा कि आरोपी ढके हुए चेहरे के साथ अदालत में पेश हुए थे",
+          "prediction": "पुलिस दिक्षक चंदर सेखर सोलन कीन है कहा कि आरोपी ढ़के हुए चेहरे के साथ अधालत में पेश हूई थे बिल्कुम जब लग रहे हैं तो वह नहीं",
+          "error_tag": "rare_word_swap",
+          "reason": "The sentence frame is preserved, but one or two long content words are replaced with acoustically plausible alternatives.",
+          "metrics": {
+            "ref_tokens": 19,
+            "pred_tokens": 28,
+            "token_edit_distance": 17,
+            "token_wer_proxy": 0.8947368421052632,
+            "char_edit_ratio": 0.5211267605633803,
+            "length_ratio": 1.4736842105263157,
+            "overlap_ratio": 0.5789473684210527,
+            "repeated_token_ratio": 0.0,
+            "max_token_run": 1,
+            "max_ngram_repeat": 1,
+            "digit_mismatch": false,
+            "max_unmatched_ref_token_length": 7,
+            "max_unmatched_pred_token_length": 7
+          }
+        },
+        {
+          "index": 21,
+          "reference": "यह ऑरोरा बोरेलिस को देखने का एक अच्छा अवसर प्रदान करता है क्योंकि आकाश में उस समय अंधकार सा ही रहेगा",
+          "prediction": "ये आरूरा बोरिलीस को देखने का एक अच्छा अंफसर प्रधान करता है क्योंकि आकाश में उस समय अन्दकार साही रहेगा इस वो लगे ना तो जो भी यह",
+          "error_tag": "rare_word_swap",
+          "reason": "The sentence frame is preserved, but one or two long content words are replaced with acoustically plausible alternatives.",
+          "metrics": {
+            "ref_tokens": 21,
+            "pred_tokens": 28,
+            "token_edit_distance": 16,
+            "token_wer_proxy": 0.7619047619047619,
+            "char_edit_ratio": 0.35,
+            "length_ratio": 1.3333333333333333,
+            "overlap_ratio": 0.6666666666666666,
+            "repeated_token_ratio": 0.0,
+            "max_token_run": 1,
+            "max_ngram_repeat": 1,
+            "digit_mismatch": false,
+            "max_unmatched_ref_token_length": 7,
+            "max_unmatched_pred_token_length": 7
+          }
+        },
+        {
+          "index": 1,
+          "reference": "कुछ अणुओं में अस्थिर केंद्रक होता है जिसका मतलब यह है कि उनमें थोड़े या बिना किसी झटके से टूटने की प्रवृत्ति होती है",
+          "prediction": "कुछ अर्हूं में आस कैनद्रक होता है जिसका मतलब यहां की उनमें सोड़े या बिना किसी झटके से तूठने की का प्रवत्य हो थी हैं इस नहीं लेगे �",
+          "error_tag": "rare_word_swap",
+          "reason": "The sentence frame is preserved, but one or two long content words are replaced with acoustically plausible alternatives.",
+          "metrics": {
+            "ref_tokens": 24,
+            "pred_tokens": 28,
+            "token_edit_distance": 16,
+            "token_wer_proxy": 0.6666666666666666,
+            "char_edit_ratio": 0.3763440860215054,
+            "length_ratio": 1.1666666666666667,
+            "overlap_ratio": 0.5416666666666666,
+            "repeated_token_ratio": 0.0,
+            "max_token_run": 1,
+            "max_ngram_repeat": 1,
+            "digit_mismatch": false,
+            "max_unmatched_ref_token_length": 9,
+            "max_unmatched_pred_token_length": 7
+          }
+        },
+        {
+          "index": 6,
+          "reference": "अगर आपने फ़िल्म नेशनल ट्रेज़र देखी है तो आपको लगेगा कि स्वतंत्रता के घोषणा-पत्र के पीछे एक ख़ज़ाने का नक्शा लिखा गया था",
+          "prediction": "अगर आपने फिल्म नेसनल ट्रेजर देखी हैं तो आापको लगेगा कि सुतन्सता के घूशनाव पत्र के मीचे एक खा जाने के हा नक्सा लिखा है था इस",
+          "error_tag": "rare_word_swap",
+          "reason": "The sentence frame is preserved, but one or two long content words are replaced with acoustically plausible alternatives.",
+          "metrics": {
+            "ref_tokens": 24,
+            "pred_tokens": 27,
+            "token_edit_distance": 15,
+            "token_wer_proxy": 0.625,
+            "char_edit_ratio": 0.26804123711340205,
+            "length_ratio": 1.125,
+            "overlap_ratio": 0.5416666666666666,
+            "repeated_token_ratio": 0.0,
+            "max_token_run": 1,
+            "max_ngram_repeat": 1,
+            "digit_mismatch": false,
+            "max_unmatched_ref_token_length": 10,
+            "max_unmatched_pred_token_length": 8
+          }
+        },
+        {
+          "index": 17,
+          "reference": "परिसर के किनारे ज़्यादातर इमारतें फिर से बनाई गई हैं ताकि पर्यटकों को बेहतर ढंग से पता चल सके कि वे मूल रूप में कैसी दिखाई देती थी",
+          "prediction": "परिस्या की किनारे से आतातर हमारतें फिर से मनाई गई है ताकि परेटोखु को बहतर ध्रंग से پता चले कि वे मूल रूप में कैसी दिखा ही थी अभी जी",
+          "error_tag": "rare_word_swap",
+          "reason": "The sentence frame is preserved, but one or two long content words are replaced with acoustically plausible alternatives.",
+          "metrics": {
+            "ref_tokens": 28,
+            "pred_tokens": 30,
+            "token_edit_distance": 17,
+            "token_wer_proxy": 0.6071428571428571,
+            "char_edit_ratio": 0.3106796116504854,
+            "length_ratio": 1.0714285714285714,
+            "overlap_ratio": 0.5,
+            "repeated_token_ratio": 0.0,
+            "max_token_run": 1,
+            "max_ngram_repeat": 1,
+            "digit_mismatch": false,
+            "max_unmatched_ref_token_length": 9,
+            "max_unmatched_pred_token_length": 7
+          }
+        },
+        {
+          "index": 10,
+          "reference": "ज़्यादा टैक्स वाले देशों में रहने वाले पर्यटक कभी-कभी खास तौर पर मादक पेय और तम्बाकू जैसे उत्पादों पर काफ़ी बचत कर सकते हैं",
+          "prediction": "ज्यादा टैक्स वाले देशों में रहने वॉले कभी कबी हा सतार पर माधक पे और तमभाकु जैसे उत्पाडों पार काफी बचत कर सकते हैं अगर आए लि",
+          "error_tag": "rare_word_swap",
+          "reason": "The sentence frame is preserved, but one or two long content words are replaced with acoustically plausible alternatives.",
+          "metrics": {
+            "ref_tokens": 25,
+            "pred_tokens": 27,
+            "token_edit_distance": 15,
+            "token_wer_proxy": 0.6,
+            "char_edit_ratio": 0.27,
+            "length_ratio": 1.08,
+            "overlap_ratio": 0.52,
+            "repeated_token_ratio": 0.0,
+            "max_token_run": 1,
+            "max_ngram_repeat": 1,
+            "digit_mismatch": false,
+            "max_unmatched_ref_token_length": 8,
+            "max_unmatched_pred_token_length": 8
+          }
+        },
+        {
+          "index": 24,
+          "reference": "वर्चुअल टीमों को भी परंपरागत टीमों की तरह ही उत्कृष्टता के समान मानकों पर रखा जाता है लेकिन उनमें बारीक अंतर होते हैं",
+          "prediction": "वर्चुल टीमों को भी परम प्रागत टिमो के तरह ही उस्तक्रुष्टता के समान मानोंको पेर रखा जाता है लेकिन उनमें बारिक अंतर होता आये इस ना",
+          "error_tag": "rare_word_swap",
+          "reason": "The sentence frame is preserved, but one or two long content words are replaced with acoustically plausible alternatives.",
+          "metrics": {
+            "ref_tokens": 23,
+            "pred_tokens": 26,
+            "token_edit_distance": 13,
+            "token_wer_proxy": 0.5652173913043478,
+            "char_edit_ratio": 0.24210526315789474,
+            "length_ratio": 1.1304347826086956,
+            "overlap_ratio": 0.5652173913043478,
+            "repeated_token_ratio": 0.0,
+            "max_token_run": 1,
+            "max_ngram_repeat": 1,
+            "digit_mismatch": false,
+            "max_unmatched_ref_token_length": 10,
+            "max_unmatched_pred_token_length": 13
+          }
+        },
+        {
+          "index": 2,
+          "reference": "गंभीर मौसम किसी भी खतरनाक मौसमी घटना के लिए वर्गीय शब्द है जिसमें नुकसान गंभीर सामाजिक व्यवधान या मानव जीवन की हानि की संभावना है",
+          "prediction": "गंबीर मौसम किसी भी खतनाक मॉसम ही घटना के लिए वर्गी सब्दह है जिसमें नुक्सान गंली सामाजिक वयवधान हैं या मानप जीवन की हानी की संभ",
+          "error_tag": "rare_word_swap",
+          "reason": "The sentence frame is preserved, but one or two long content words are replaced with acoustically plausible alternatives.",
+          "metrics": {
+            "ref_tokens": 25,
+            "pred_tokens": 26,
+            "token_edit_distance": 14,
+            "token_wer_proxy": 0.56,
+            "char_edit_ratio": 0.20952380952380953,
+            "length_ratio": 1.04,
+            "overlap_ratio": 0.52,
+            "repeated_token_ratio": 0.0,
+            "max_token_run": 1,
+            "max_ngram_repeat": 1,
+            "digit_mismatch": false,
+            "max_unmatched_ref_token_length": 7,
+            "max_unmatched_pred_token_length": 7
+          }
+        },
+        {
+          "index": 4,
+          "reference": "तीसरी शताब्दी ईसा पूर्व में मिस्रियों द्वारा निर्मित ग्रेट पिरामिड मृत फिरौन का सम्मान करने के लिए निर्मित कई बड़ी पिरामिड संरचनाओं में से एक है",
+          "prediction": "तीसरी सटाब्दि इसह पूर्व में मिसरियो ध्यारा निरमित ग्रेट पिरामीड मुरुत फिरौन का सम्मान करने के लिए नीरमीत कई बड़ी पीराक्मिड",
+          "error_tag": "rare_word_swap",
+          "reason": "The sentence frame is preserved, but one or two long content words are replaced with acoustically plausible alternatives.",
+          "metrics": {
+            "ref_tokens": 26,
+            "pred_tokens": 21,
+            "token_edit_distance": 14,
+            "token_wer_proxy": 0.5384615384615384,
+            "char_edit_ratio": 0.31092436974789917,
+            "length_ratio": 0.8076923076923077,
+            "overlap_ratio": 0.46153846153846156,
+            "repeated_token_ratio": 0.0,
+            "max_token_run": 1,
+            "max_ngram_repeat": 1,
+            "digit_mismatch": false,
+            "max_unmatched_ref_token_length": 9,
+            "max_unmatched_pred_token_length": 9
+          }
+        },
+        {
+          "index": 3,
+          "reference": "विखंडन बम इस सिद्धांत पर काम करता है कि कई प्रोटॉन और न्यूट्रॉन वाले एक नाभिक को एक साथ रखने के लिए ऊर्जा लगती है",
+          "prediction": "वि खंडन बम की सिधानत पर काम करता है कही प्रोटॉन और न्यूट्रॉल वाले एक नाभिक को एग साथ रखने के लिए ऊर्जा लगती हैं में आसी अच्",
+          "error_tag": "rare_word_swap",
+          "reason": "The sentence frame is preserved, but one or two long content words are replaced with acoustically plausible alternatives.",
+          "metrics": {
+            "ref_tokens": 25,
+            "pred_tokens": 28,
+            "token_edit_distance": 12,
+            "token_wer_proxy": 0.48,
+            "char_edit_ratio": 0.2247191011235955,
+            "length_ratio": 1.12,
+            "overlap_ratio": 0.68,
+            "repeated_token_ratio": 0.0,
+            "max_token_run": 1,
+            "max_ngram_repeat": 1,
+            "digit_mismatch": false,
+            "max_unmatched_ref_token_length": 9,
+            "max_unmatched_pred_token_length": 9
+          }
+        },
+        {
+          "index": 12,
+          "reference": "यदि आपको देश की सड़कों पर वाहन चलाने की आदत नहीं है तो अपने साथ यह जानकारी रखें : स्टीप ग्रेड्‍स पतली गलियाँ और ख़तरनाक मोड़",
+          "prediction": "यदी आपको देश की सर्ट को पर वाहन चलानी की यादत नहीं है तो अपने साथ यह जानकारी रखें इस टीब ग्रिड्स पतली गलियां और खतरनाक मूड�",
+          "error_tag": "rare_word_swap",
+          "reason": "The sentence frame is preserved, but one or two long content words are replaced with acoustically plausible alternatives.",
+          "metrics": {
+            "ref_tokens": 26,
+            "pred_tokens": 27,
+            "token_edit_distance": 11,
+            "token_wer_proxy": 0.4230769230769231,
+            "char_edit_ratio": 0.1717171717171717,
+            "length_ratio": 1.0384615384615385,
+            "overlap_ratio": 0.6153846153846154,
+            "repeated_token_ratio": 0.0,
+            "max_token_run": 1,
+            "max_ngram_repeat": 1,
+            "digit_mismatch": false,
+            "max_unmatched_ref_token_length": 7,
+            "max_unmatched_pred_token_length": 7
+          }
+        }
+      ]
+    },
+    "Lexical / phonetic substitution": {
+      "count": 5,
+      "examples": [
+        {
+          "index": 13,
+          "reference": "अधिकांश छोटे द्वीप स्वतंत्र राष्ट्र हैं या फ़्रांस से संबंधित हैं और लग्ज़री बीच रिसॉर्ट के रूप में जाने जाते हैं",
+          "prediction": "अदिकांस छोते भी प्र सुतनत्र राश्टर हैं या फ्रांच से संबंधित है कोल लगजरी वीच्ष रीजॉड के रूप में जाने जहाते है इम्म आया त",
+          "error_tag": "content_word_substitution",
+          "reason": "Most of the sentence frame is preserved, but content words are swapped with acoustically similar alternatives.",
+          "metrics": {
+            "ref_tokens": 21,
+            "pred_tokens": 25,
+            "token_edit_distance": 17,
+            "token_wer_proxy": 0.8095238095238095,
+            "char_edit_ratio": 0.3978494623655914,
+            "length_ratio": 1.1904761904761905,
+            "overlap_ratio": 0.38095238095238093,
+            "repeated_token_ratio": 0.0,
+            "max_token_run": 1,
+            "max_ngram_repeat": 1,
+            "digit_mismatch": false,
+            "max_unmatched_ref_token_length": 8,
+            "max_unmatched_pred_token_length": 7
+          }
+        },
+        {
+          "index": 9,
+          "reference": "विशेष रूप से यह दावा किया जाता है कि किसी व्यक्ति की सूक्ष्म अभिव्यक्तियों की सही व्याख्या करके यह समझा सकता है कि वह झूठ बोल रहा है या नहीं",
+          "prediction": "विसे सुर्प जायों दावकीहा जता है कि किस व्यक्ति की सूक्षन अभी वियकतियो की शही ब्याक्य करने करके या समझा सकता था कि वो जूट बोल रहा हे",
+          "error_tag": "content_word_substitution",
+          "reason": "Most of the sentence frame is preserved, but content words are swapped with acoustically similar alternatives.",
+          "metrics": {
+            "ref_tokens": 30,
+            "pred_tokens": 28,
+            "token_edit_distance": 21,
+            "token_wer_proxy": 0.7,
+            "char_edit_ratio": 0.35135135135135137,
+            "length_ratio": 0.9333333333333333,
+            "overlap_ratio": 0.4,
+            "repeated_token_ratio": 0.0,
+            "max_token_run": 1,
+            "max_ngram_repeat": 1,
+            "digit_mismatch": false,
+            "max_unmatched_ref_token_length": 13,
+            "max_unmatched_pred_token_length": 8
+          }
+        },
+        {
+          "index": 7,
+          "reference": "अमेरिकी जिमनास्टिक्स संयुक्त राज्य ओलंपिक समिति के पत्र का समर्थन करता है साथ ही सभी एथलीटों को एक सुरक्षित माहौल देने के लिए ओलंपिक परिवार के होने की अहमियत स्वीकार करता है",
+          "prediction": "अमेर की जिमनास्तिक सहयुपत राज ओलंपिक शमीती के पत्र का समरतन करता है साथ ही सभी इतलीटों को एक सुरच्छित महौल देने केलिए ओंलं awal karibar के",
+          "error_tag": "content_word_substitution",
+          "reason": "Most of the sentence frame is preserved, but content words are swapped with acoustically similar alternatives.",
+          "metrics": {
+            "ref_tokens": 32,
+            "pred_tokens": 27,
+            "token_edit_distance": 20,
+            "token_wer_proxy": 0.625,
+            "char_edit_ratio": 0.3873239436619718,
+            "length_ratio": 0.84375,
+            "overlap_ratio": 0.4375,
+            "repeated_token_ratio": 0.0,
+            "max_token_run": 1,
+            "max_ngram_repeat": 1,
+            "digit_mismatch": false,
+            "max_unmatched_ref_token_length": 12,
+            "max_unmatched_pred_token_length": 10
+          }
+        },
+        {
+          "index": 23,
+          "reference": "इटली के कई अन्य शहरों और दुनिया के बाकी हिस्सों में खासकर पोलैंड में इस तरह के सेटअप बनाए गए थे जिन्हें बड़ी संख्या में लोगों ने देखा था",
+          "prediction": "इतली के कही अर्ने सहरों और दुनियां के बाकी हिस्सों में खासकर पॉलेंड मे इस तरह के सैटव बनाए गई थे जिने भ़ी संख्यामे लोग देखने है",
+          "error_tag": "content_word_substitution",
+          "reason": "Most of the sentence frame is preserved, but content words are swapped with acoustically similar alternatives.",
+          "metrics": {
+            "ref_tokens": 29,
+            "pred_tokens": 27,
+            "token_edit_distance": 17,
+            "token_wer_proxy": 0.5862068965517241,
+            "char_edit_ratio": 0.26851851851851855,
+            "length_ratio": 0.9310344827586207,
+            "overlap_ratio": 0.41379310344827586,
+            "repeated_token_ratio": 0.0,
+            "max_token_run": 1,
+            "max_ngram_repeat": 1,
+            "digit_mismatch": false,
+            "max_unmatched_ref_token_length": 7,
+            "max_unmatched_pred_token_length": 8
+          }
+        },
+        {
+          "index": 19,
+          "reference": "इटली के कई अन्य शहरों और दुनिया के बाकी हिस्सों में खासकर पोलैंड में इस तरह के सेटअप बनाए गए थे जिन्हें बड़ी संख्या में लोगों ने देखा था",
+          "prediction": "इतली के कही अन्यां सहरों और दुनिया के बाकी हिस्सों में खासकर पॉलेंड मे इस तरह के सैटव बनाए गए है जिने भ़ी संक्यमेंलोगोंने मेरे नही",
+          "error_tag": "content_word_substitution",
+          "reason": "Most of the sentence frame is preserved, but content words are swapped with acoustically similar alternatives.",
+          "metrics": {
+            "ref_tokens": 29,
+            "pred_tokens": 26,
+            "token_edit_distance": 16,
+            "token_wer_proxy": 0.5517241379310345,
+            "char_edit_ratio": 0.25,
+            "length_ratio": 0.896551724137931,
+            "overlap_ratio": 0.4482758620689655,
+            "repeated_token_ratio": 0.0,
+            "max_token_run": 1,
+            "max_ngram_repeat": 1,
+            "digit_mismatch": false,
+            "max_unmatched_ref_token_length": 7,
+            "max_unmatched_pred_token_length": 15
+          }
+        }
+      ]
+    },
+    "Repetition / hallucination": {
+      "count": 4,
+      "examples": [
+        {
+          "index": 18,
+          "reference": "यह समुद्र के नीचे पतला और ऊंचे क्षेत्रों के नीचे मोटा होता है",
+          "prediction": "ये समुत्र की नीचे पतला और उंच हेसेत्यों में निचा मोटा होता हैं अह आएक बन जी तो ये वह लेगे रहे है देशन भी थे फिर खुद लग लोग है",
+          "error_tag": "decoder_loop",
+          "reason": "The prediction follows the reference for a short prefix, then enters a repetition loop and keeps emitting the same token or phrase.",
+          "metrics": {
+            "ref_tokens": 13,
+            "pred_tokens": 31,
+            "token_edit_distance": 25,
+            "token_wer_proxy": 1.9230769230769231,
+            "char_edit_ratio": 1.2040816326530612,
+            "length_ratio": 2.3846153846153846,
+            "overlap_ratio": 0.46153846153846156,
+            "repeated_token_ratio": 0.0,
+            "max_token_run": 1,
+            "max_ngram_repeat": 1,
+            "digit_mismatch": false,
+            "max_unmatched_ref_token_length": 9,
+            "max_unmatched_pred_token_length": 9
+          }
+        },
+        {
+          "index": 22,
+          "reference": "चीज़ों पर कुछ बनाकर या खरोंच कर इस जगह को नुक़सान न पहुंचाएं",
+          "prediction": "चीजों पर कुछ बनाकर है या खर्द करे सिस जोह का करनुक्सान नहीं वो चाहें अगर मतलब आया लेकिन तो इस डिया कॉम्म रहे हैं था एक भी और टी�",
+          "error_tag": "decoder_loop",
+          "reason": "The prediction follows the reference for a short prefix, then enters a repetition loop and keeps emitting the same token or phrase.",
+          "metrics": {
+            "ref_tokens": 13,
+            "pred_tokens": 30,
+            "token_edit_distance": 25,
+            "token_wer_proxy": 1.9230769230769231,
+            "char_edit_ratio": 1.3541666666666667,
+            "length_ratio": 2.3076923076923075,
+            "overlap_ratio": 0.38461538461538464,
+            "repeated_token_ratio": 0.0,
+            "max_token_run": 1,
+            "max_ngram_repeat": 1,
+            "digit_mismatch": false,
+            "max_unmatched_ref_token_length": 8,
+            "max_unmatched_pred_token_length": 9
+          }
+        },
+        {
+          "index": 5,
+          "reference": "चांद की सतह चट्टानों और धूल से बनी है चांद की बाहरी परत को क्रस्ट कहते हैं",
+          "prediction": "चान्द की सतह छक्टानों और धूल से बनि है चांद भाहरय प्रत को क्रस्थ कहते हैं अम्म में आप जाए लेकिन ना वहां उसके रहे हो गई तो यह जी ज",
+          "error_tag": "decoder_loop",
+          "reason": "The prediction follows the reference for a short prefix, then enters a repetition loop and keeps emitting the same token or phrase.",
+          "metrics": {
+            "ref_tokens": 17,
+            "pred_tokens": 31,
+            "token_edit_distance": 22,
+            "token_wer_proxy": 1.2941176470588236,
+            "char_edit_ratio": 0.896551724137931,
+            "length_ratio": 1.8235294117647058,
+            "overlap_ratio": 0.5882352941176471,
+            "repeated_token_ratio": 0.0,
+            "max_token_run": 1,
+            "max_ngram_repeat": 1,
+            "digit_mismatch": false,
+            "max_unmatched_ref_token_length": 8,
+            "max_unmatched_pred_token_length": 8
+          }
+        },
+        {
+          "index": 15,
+          "reference": "लेकिन उन पक्षियों के बारे में बहुत सी चीजें हैं जो अभी भी डायनासोर जैसे दिखते हैं",
+          "prediction": "लेकिन उन पक्षीयों के बारे में बहुत सी चीजे है जो अभी भी मे डायनोसौर जैसी दिखती हैं आप वह लेके रहे हो गई तो नहीं थी यह एक टीम फि",
+          "error_tag": "decoder_loop",
+          "reason": "The prediction follows the reference for a short prefix, then enters a repetition loop and keeps emitting the same token or phrase.",
+          "metrics": {
+            "ref_tokens": 17,
+            "pred_tokens": 31,
+            "token_edit_distance": 20,
+            "token_wer_proxy": 1.1764705882352942,
+            "char_edit_ratio": 0.6307692307692307,
+            "length_ratio": 1.8235294117647058,
+            "overlap_ratio": 0.6470588235294118,
+            "repeated_token_ratio": 0.0,
+            "max_token_run": 1,
+            "max_ngram_repeat": 1,
+            "digit_mismatch": false,
+            "max_unmatched_ref_token_length": 8,
+            "max_unmatched_pred_token_length": 8
+          }
+        }
+      ]
+    },
+    "Deletion / truncation": {
+      "count": 2,
+      "examples": [
+        {
+          "index": 11,
+          "reference": "हालांकि यह अक्सर केवल एक गलत रूढ़िवादी धारणा होती है पेरिस में घुलने-मिलने का सबसे अच्छा तरीका अभी भी अपना सबसे अच्छा व्यवहार करना है किसी ऐसे व्यक्ति की तरह अभिनय करना जो  बिएन एलेव” अच्छी तरह से पला-बढ़ा हो। यह घुलने-मिलने को काफी आसान बना देगा।",
+          "prediction": "हालाकि ये अख्सर केवल एक गलत रूडी वादी धारना होती है पेरिस में घुलने मिलनी का सबसे ऐच्छा तरीका अमी भी अپना सبसेज्या विवार करने ह",
+          "error_tag": "content_drop",
+          "reason": "The hypothesis is substantially shorter than the reference and drops a trailing content span.",
+          "metrics": {
+            "ref_tokens": 50,
+            "pred_tokens": 28,
+            "token_edit_distance": 39,
+            "token_wer_proxy": 0.78,
+            "char_edit_ratio": 0.5505050505050505,
+            "length_ratio": 0.56,
+            "overlap_ratio": 0.24,
+            "repeated_token_ratio": 0.0,
+            "max_token_run": 1,
+            "max_ngram_repeat": 1,
+            "digit_mismatch": false,
+            "max_unmatched_ref_token_length": 9,
+            "max_unmatched_pred_token_length": 6
+          }
+        },
+        {
+          "index": 25,
+          "reference": "अगर आप सर्दियों में उत्तरी बाटलिक को पार करते हैं तो आपको केबिन स्थान की जांच करनी होगी  क्योंकि क्योंकि जो लोग ज्यादा प्रभावित है उन्हें बर्फ से गुजरने पर काफी भयानक शोर महसूस होगा ।",
+          "prediction": "अगर आप सर्दिया में उतनरी बाटल का को पार करते हैं तो आमको केविनस्थान की जाच करनी हुगी क्योंकि जो लोग ज्यादा प्रभावेत है उन्हें म",
+          "error_tag": "content_drop",
+          "reason": "The hypothesis is substantially shorter than the reference and drops a trailing content span.",
+          "metrics": {
+            "ref_tokens": 35,
+            "pred_tokens": 26,
+            "token_edit_distance": 20,
+            "token_wer_proxy": 0.5714285714285714,
+            "char_edit_ratio": 0.3561643835616438,
+            "length_ratio": 0.7428571428571429,
+            "overlap_ratio": 0.45714285714285713,
+            "repeated_token_ratio": 0.0,
+            "max_token_run": 1,
+            "max_ngram_repeat": 1,
+            "digit_mismatch": false,
+            "max_unmatched_ref_token_length": 8,
+            "max_unmatched_pred_token_length": 10
+          }
+        }
+      ]
+    },
+    "Number / numeral mismatch": {
+      "count": 1,
+      "examples": [
+        {
+          "index": 8,
+          "reference": "1966 से सुंदरबन वन्यजीव अभ्यारण बन गया है और एक आकलन के अनुसार इस इलाके में अब लगभग 400 रॉयल बंगाल टाइगर्स और लगभग 30,000 चीतल हैं",
+          "prediction": "उन्निस्या छांचर्त से सुंदर बन वंजीव अभ्यहारन बंगै है और एक आ कलन के अनुसार इस इलाके में जब लगभग चार सो रोयल बमकाल टाइवर्",
+          "error_tag": "numeral_surface_form",
+          "reason": "The sentence scaffold is broadly similar, but numeric tokens are substituted or reformatted incorrectly.",
+          "metrics": {
+            "ref_tokens": 28,
+            "pred_tokens": 25,
+            "token_edit_distance": 20,
+            "token_wer_proxy": 0.7142857142857143,
+            "char_edit_ratio": 0.5192307692307693,
+            "length_ratio": 0.8928571428571429,
+            "overlap_ratio": 0.39285714285714285,
+            "repeated_token_ratio": 0.0,
+            "max_token_run": 1,
+            "max_ngram_repeat": 1,
+            "digit_mismatch": true,
+            "max_unmatched_ref_token_length": 7,
+            "max_unmatched_pred_token_length": 9
+          }
+        }
+      ]
+    },
+    "Semantic drift / insertion": {
+      "count": 1,
+      "examples": [
+        {
+          "index": 20,
+          "reference": "माऊ आंदोलन द्वारा स्वतंत्रता के लिए आयोजित संघर्ष के दौरान नगर में एक शांतिपूर्ण सभा में प्रमुख तापुआ तामासेसे सेलोफ़ी तृतीय की हत्या हो गई",
+          "prediction": "माव आंदोलन धॉरा सत्रतिता के लिये अयूज़ीस संगर्श के मैं नगह में एक शांती पुर्न सभा मे प्रमुक्त तापौआ तमोषे से सैलोफी थ्वि",
+          "error_tag": "off_target_drift",
+          "reason": "The decoder diverges from the reference early and inserts off-target content instead of making a local substitution.",
+          "metrics": {
+            "ref_tokens": 25,
+            "pred_tokens": 23,
+            "token_edit_distance": 20,
+            "token_wer_proxy": 0.8,
+            "char_edit_ratio": 0.46956521739130436,
+            "length_ratio": 0.92,
+            "overlap_ratio": 0.24,
+            "repeated_token_ratio": 0.0,
+            "max_token_run": 1,
+            "max_ngram_repeat": 1,
+            "digit_mismatch": false,
+            "max_unmatched_ref_token_length": 10,
+            "max_unmatched_pred_token_length": 8
+          }
+        }
+      ]
+    }
+  },
+  "top_fixes": [
+    {
+      "error_type": "Rare content-word confusion",
+      "count": 12,
+      "fix": "Add domain hotword biasing or shallow-fusion vocabulary support for rare nouns, names, and technical terms at decode time.",
+      "why_it_works": "This targets the exact words the model confuses most often, and it is cheaper and faster to deploy than retraining the full ASR model."
+    },
+    {
+      "error_type": "Lexical / phonetic substitution",
+      "count": 5,
+      "fix": "Align training/evaluation text normalization and inject a domain hotword list for rare content words, names, and technical terms.",
+      "why_it_works": "This reduces mismatch between label forms and biases the decoder toward acoustically plausible domain words instead of generic near-sounds."
+    },
+    {
+      "error_type": "Repetition / hallucination",
+      "count": 4,
+      "fix": "Apply repetition-aware decoding guards and a post-decoding repetition collapse.",
+      "why_it_works": "This directly targets runaway loops by preventing repeated n-grams during decoding and removing repeated tails after inference."
+    },
+    {
+      "error_type": "Deletion / truncation",
+      "count": 2,
+      "fix": "Use beam search with a stronger length penalty and reject hypotheses whose token count is far below the acoustic duration prior.",
+      "why_it_works": "This makes premature end-of-sequence decisions less attractive and reduces content drops on longer utterances."
+    },
+    {
+      "error_type": "Number / numeral mismatch",
+      "count": 1,
+      "fix": "Normalize numeric forms consistently before scoring and add a numeral post-processor for digits, commas, and Hindi number surface forms.",
+      "why_it_works": "Many number errors are formatting-level mistakes; a deterministic normalizer corrects them without retraining the acoustic model."
+    }
+  ],
+  "postprocess_demo": {
+    "summary": {
+      "selected_count": 4,
+      "selection_rule": "Top repetition-heavy errors ranked by repeated-token ratio, repeated n-gram count, and token-level WER proxy.",
+      "improved": 0,
+      "unchanged": 4,
+      "worsened": 0,
+      "average_before_token_wer_proxy": 1.5792,
+      "average_after_token_wer_proxy": 1.5792
+    },
+    "rows": [
+      {
+        "index": 18,
+        "reference": "यह समुद्र के नीचे पतला और ऊंचे क्षेत्रों के नीचे मोटा होता है",
+        "before": "ये समुत्र की नीचे पतला और उंच हेसेत्यों में निचा मोटा होता हैं अह आएक बन जी तो ये वह लेगे रहे है देशन भी थे फिर खुद लग लोग है",
+        "after": "ये समुत्र की नीचे पतला और उंच हेसेत्यों में निचा मोटा होता हैं अह आएक बन जी तो ये वह लेगे रहे है देशन भी थे फिर खुद लग लोग है",
+        "before_token_wer_proxy": 1.9231,
+        "after_token_wer_proxy": 1.9231
+      },
+      {
+        "index": 22,
+        "reference": "चीज़ों पर कुछ बनाकर या खरोंच कर इस जगह को नुक़सान न पहुंचाएं",
+        "before": "चीजों पर कुछ बनाकर है या खर्द करे सिस जोह का करनुक्सान नहीं वो चाहें अगर मतलब आया लेकिन तो इस डिया कॉम्म रहे हैं था एक भी और टी�",
+        "after": "चीजों पर कुछ बनाकर है या खर्द करे सिस जोह का करनुक्सान नहीं वो चाहें अगर मतलब आया लेकिन तो इस डिया कॉम्म रहे हैं था एक भी और टी�",
+        "before_token_wer_proxy": 1.9231,
+        "after_token_wer_proxy": 1.9231
+      },
+      {
+        "index": 5,
+        "reference": "चांद की सतह चट्टानों और धूल से बनी है चांद की बाहरी परत को क्रस्ट कहते हैं",
+        "before": "चान्द की सतह छक्टानों और धूल से बनि है चांद भाहरय प्रत को क्रस्थ कहते हैं अम्म में आप जाए लेकिन ना वहां उसके रहे हो गई तो यह जी ज",
+        "after": "चान्द की सतह छक्टानों और धूल से बनि है चांद भाहरय प्रत को क्रस्थ कहते हैं अम्म में आप जाए लेकिन ना वहां उसके रहे हो गई तो यह जी ज",
+        "before_token_wer_proxy": 1.2941,
+        "after_token_wer_proxy": 1.2941
+      },
+      {
+        "index": 15,
+        "reference": "लेकिन उन पक्षियों के बारे में बहुत सी चीजें हैं जो अभी भी डायनासोर जैसे दिखते हैं",
+        "before": "लेकिन उन पक्षीयों के बारे में बहुत सी चीजे है जो अभी भी मे डायनोसौर जैसी दिखती हैं आप वह लेके रहे हो गई तो नहीं थी यह एक टीम फि",
+        "after": "लेकिन उन पक्षीयों के बारे में बहुत सी चीजे है जो अभी भी मे डायनोसौर जैसी दिखती हैं आप वह लेके रहे हो गई तो नहीं थी यह एक टीम फि",
+        "before_token_wer_proxy": 1.1765,
+        "after_token_wer_proxy": 1.1765
+      }
+    ]
+  }
+}

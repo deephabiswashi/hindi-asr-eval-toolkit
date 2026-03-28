@@ -1,0 +1,23 @@
+{
+  "debug_mode": false,
+  "reuse_artifacts_enabled": true,
+  "training_mode": "fresh_fine_tune_from_base",
+  "model_output_dir": "models\\whisper-ft-fresh",
+  "training_samples": 5000,
+  "baseline_segment_wer": 2.4794877403702746,
+  "fleurs_baseline_wer": 0.8415657946114798,
+  "fleurs_fine_tuned_wer": 0.8508395158141351,
+  "fleurs_fine_tuned_wer_before_fix": 3.508688012495119,
+  "fleurs_fine_tuned_wer_after_fix": 0.8508395158141351,
+  "valid_training_baseline_predictions": 5000,
+  "valid_fleurs_baseline_predictions": 418,
+  "valid_fleurs_fine_tuned_predictions": 418,
+  "valid_fleurs_fine_tuned_predictions_before_fix": 418,
+  "valid_fleurs_fine_tuned_predictions_after_fix": 418,
+  "before_skipped_samples": 0,
+  "after_skipped_samples": 0,
+  "before_vs_after_improvement": 2.657848496680984,
+  "q2_cleaned_samples": 5000,
+  "q2_number_examples": 5,
+  "q2_english_tagging_examples": 5
+}

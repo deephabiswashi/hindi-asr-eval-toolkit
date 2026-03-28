@@ -1,0 +1,35 @@
+{
+  "annotated_samples": 42,
+  "system_right": 23,
+  "system_wrong": 19,
+  "low_confidence_accuracy": 0.5476,
+  "predicted_correct_count": 20,
+  "predicted_incorrect_count": 22,
+  "manual_correct_count": 3,
+  "manual_incorrect_count": 39,
+  "q3c_takeaway": "The low-confidence bucket captures many genuinely ambiguous cases. The heuristic system starts to break down on tokenization noise, borrowed English words in Devanagari, and rare but valid vocabulary outside the curated lexicon.",
+  "max_annotations": 50,
+  "skipped_samples": 8,
+  "q3d_unreliable_categories": [
+    {
+      "category": "plausible_but_wrong_forms",
+      "count": 18,
+      "why_unreliable": "Some misspellings still look orthographically plausible, so they slip through rule-based checks as false positives.",
+      "example_words": [
+        "नुसार",
+        "अवलेबल",
+        "पोएटरी",
+        "रिजैक्ट",
+        "रजीशों"
+      ]
+    },
+    {
+      "category": "over_aggressive_near_match_rules",
+      "count": 1,
+      "why_unreliable": "Nearest-word matching can force a rare valid word toward a common but wrong dictionary neighbor.",
+      "example_words": [
+        "शासन"
+      ]
+    }
+  ]
+}

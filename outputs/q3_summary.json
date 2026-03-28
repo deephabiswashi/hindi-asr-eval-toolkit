@@ -1,0 +1,36 @@
+{
+  "input_csv": "C:\\Users\\admin\\Desktop\\JoshTalks\\Unique Words Data - Sheet1.csv",
+  "total_words": 177508,
+  "correct_spelling_count": 112648,
+  "incorrect_spelling_count": 64860,
+  "confidence_distribution": {
+    "high": 630,
+    "medium": 23731,
+    "low": 153147
+  },
+  "classification_source_distribution": {
+    "devanagari_english_medium": 13075,
+    "devanagari_english_strong": 52,
+    "exact_dictionary": 578,
+    "inflected_dictionary": 405,
+    "invalid_pattern": 19499,
+    "matra_match": 2220,
+    "near_dictionary_match": 43094,
+    "plausible_unknown": 98538,
+    "unknown_suspicious": 47
+  },
+  "low_confidence_sample_count": 50,
+  "approach_summary": [
+    "Normalize each token with unicode cleanup, whitespace stripping, and punctuation removal.",
+    "Mark exact Hindi dictionary matches and common inflected stems as likely correct.",
+    "Treat Roman English and Devanagari English borrowings as correctly spelled when they match lexical or phonetic heuristics.",
+    "Use orthographic rule checks plus near-dictionary edit distance to catch likely spelling errors.",
+    "Assign high, medium, or low confidence based on how direct or ambiguous the evidence is."
+  ],
+  "deliverables": {
+    "detailed_results_csv": "outputs\\q3_results.csv",
+    "word_labels_csv": "outputs\\q3_word_labels.csv",
+    "counts_csv": "outputs\\q3_counts.csv",
+    "low_confidence_samples_json": "outputs\\q3_low_confidence_samples.json"
+  }
+}

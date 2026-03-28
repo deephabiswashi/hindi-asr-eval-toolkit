@@ -1,0 +1,82 @@
+[
+  {
+    "utterance_id": "utt_0007",
+    "segment_url": "https://storage.googleapis.com/testing_audio_for_josh/bcmk_TR/hindi/ch_439044_464.37_466.47.wav",
+    "overrides": [
+      {
+        "position": 5,
+        "reference_token": "सियाराम",
+        "reference_support": 1,
+        "winning_groups": [
+          {
+            "representative": "आराम",
+            "tokens": [
+              "आराम",
+              "राम"
+            ],
+            "supporting_models": [
+              "Model H",
+              "Model k",
+              "Model l",
+              "Model m",
+              "Model n"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "utterance_id": "utt_0013",
+    "segment_url": "https://storage.googleapis.com/testing_audio_for_josh/bcmk_TR/hindi/ch_1538598_420.96_433.47.wav",
+    "overrides": [
+      {
+        "position": 42,
+        "reference_token": "ये।",
+        "reference_support": 0,
+        "winning_groups": [
+          {
+            "representative": "ये",
+            "tokens": [
+              "ये"
+            ],
+            "supporting_models": [
+              "Model H",
+              "Model i",
+              "Model k",
+              "Model l",
+              "Model n"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "utterance_id": "utt_0030",
+    "segment_url": "https://storage.googleapis.com/testing_audio_for_josh/bcmk_TR/hindi/ch_1696291_166.83_171.84.wav",
+    "overrides": [
+      {
+        "position": 6,
+        "reference_token": "था।",
+        "reference_support": 0,
+        "winning_groups": [
+          {
+            "representative": "था",
+            "tokens": [
+              "था"
+            ],
+            "supporting_models": [
+              "Model H",
+              "Model i",
+              "Model k",
+              "Model l",
+              "Model m",
+              "Model n"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

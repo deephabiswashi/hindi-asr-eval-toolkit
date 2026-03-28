@@ -1,0 +1,50 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# IDE / OS files
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# Local notebooks / checkpoints
+.ipynb_checkpoints/
+
+# Local training artifacts
+models/
+
+# Large local datasets and processed audio
+data/raw/
+data/processed/
+
+# Task-specific private/source files
+FT Data.xlsx
+FT Data - data.csv
+FT Result - Sheet1.csv
+Unique Words Data - Sheet1.csv
+Question 4 - Task.csv
+
+# Logs
+*.log
+
+# Keep outputs tracked on purpose
+!outputs/
+!outputs/**

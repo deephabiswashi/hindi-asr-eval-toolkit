@@ -1,0 +1,49 @@
+{
+  "input_csv": "C:\\Users\\admin\\Desktop\\JoshTalks\\Question 4 - Task.csv",
+  "utterance_count": 46,
+  "model_count": 6,
+  "avg_baseline_wer": 0.080964,
+  "avg_lattice_wer": 0.041946,
+  "improvement_percent": 48.1917,
+  "consensus_override_cases": 3,
+  "improved_error_cases": 110,
+  "non_degradation_safeguards_applied": 31,
+  "per_model": [
+    {
+      "model_name": "Model H",
+      "baseline_wer": 0.034611,
+      "lattice_wer": 0.018337,
+      "delta": 0.016274
+    },
+    {
+      "model_name": "Model i",
+      "baseline_wer": 0.024722,
+      "lattice_wer": 0.013564,
+      "delta": 0.011158
+    },
+    {
+      "model_name": "Model k",
+      "baseline_wer": 0.118665,
+      "lattice_wer": 0.060168,
+      "delta": 0.058497
+    },
+    {
+      "model_name": "Model l",
+      "baseline_wer": 0.080346,
+      "lattice_wer": 0.037805,
+      "delta": 0.042541
+    },
+    {
+      "model_name": "Model m",
+      "baseline_wer": 0.137206,
+      "lattice_wer": 0.076736,
+      "delta": 0.06047
+    },
+    {
+      "model_name": "Model n",
+      "baseline_wer": 0.090235,
+      "lattice_wer": 0.045067,
+      "delta": 0.045168
+    }
+  ]
+}

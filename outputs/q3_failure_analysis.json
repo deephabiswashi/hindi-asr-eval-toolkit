@@ -1,0 +1,134 @@
+{
+  "total_failures": 19,
+  "category_counts": {
+    "plausible_but_wrong_forms": 18,
+    "over_aggressive_near_match_rules": 1
+  },
+  "categories": {
+    "plausible_but_wrong_forms": [
+      {
+        "word": "नुसार",
+        "predicted_label": "correct_spelling",
+        "manual_label": "incorrect_spelling",
+        "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+        "source": "plausible_unknown",
+        "suggestion": null,
+        "reviewer_note": "Likely misspelling of \"अनुसार\"; prefix dropped, not a valid standalone Hindi word"
+      },
+      {
+        "word": "अवलेबल",
+        "predicted_label": "correct_spelling",
+        "manual_label": "incorrect_spelling",
+        "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+        "source": "plausible_unknown",
+        "suggestion": null,
+        "reviewer_note": "Incorrect transliteration of \"available\"; correct form is \"अवेलेबल\" (phonetic mismatch)"
+      },
+      {
+        "word": "पोएटरी",
+        "predicted_label": "correct_spelling",
+        "manual_label": "incorrect_spelling",
+        "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+        "source": "plausible_unknown",
+        "suggestion": null,
+        "reviewer_note": "Incorrect transliteration of \"poetry\"; should be \"पोएट्री\" (missing 'ट्री' sound)"
+      },
+      {
+        "word": "रिजैक्ट",
+        "predicted_label": "correct_spelling",
+        "manual_label": "incorrect_spelling",
+        "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+        "source": "plausible_unknown",
+        "suggestion": null,
+        "reviewer_note": "Incorrect transliteration of \"reject\"; should be \"रिजेक्ट\" (vowel sound mismatch 'जै' vs 'जे')"
+      },
+      {
+        "word": "रजीशों",
+        "predicted_label": "correct_spelling",
+        "manual_label": "incorrect_spelling",
+        "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+        "source": "plausible_unknown",
+        "suggestion": null,
+        "reviewer_note": "Not a valid Hindi word; likely distorted transliteration (invalid root \"रजीश\" + plural suffix)"
+      },
+      {
+        "word": "प्रैशर",
+        "predicted_label": "correct_spelling",
+        "manual_label": "incorrect_spelling",
+        "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+        "source": "plausible_unknown",
+        "suggestion": null,
+        "reviewer_note": "Incorrect transliteration of \"pressure\"; should be \"प्रेशर\" (uses 'ै' instead of 'े')"
+      },
+      {
+        "word": "इंगेंजिमेंट",
+        "predicted_label": "correct_spelling",
+        "manual_label": "incorrect_spelling",
+        "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+        "source": "plausible_unknown",
+        "suggestion": null,
+        "reviewer_note": "Incorrect transliteration of \"engagement\"; distorted phonetics, correct form is \"एंगेजमेंट\""
+      },
+      {
+        "word": "वड़ापाव",
+        "predicted_label": "correct_spelling",
+        "manual_label": "incorrect_spelling",
+        "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+        "source": "plausible_unknown",
+        "suggestion": null,
+        "reviewer_note": "Non-standard compound; correct form is \"वड़ा पाव\" (missing space between words)"
+      },
+      {
+        "word": "चुपकेचुपके",
+        "predicted_label": "correct_spelling",
+        "manual_label": "incorrect_spelling",
+        "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+        "source": "plausible_unknown",
+        "suggestion": null,
+        "reviewer_note": "Reduplicated phrase merged without space; correct form is \"चुपके चुपके\""
+      },
+      {
+        "word": "पड़िवर्तन",
+        "predicted_label": "correct_spelling",
+        "manual_label": "incorrect_spelling",
+        "reason": "Ambiguous form: plausible Hindi spelling but outside curated lexicon.",
+        "source": "plausible_unknown",
+        "suggestion": null,
+        "reviewer_note": "Incorrect spelling of \"परिवर्तन\"; wrong consonant \"ड़\" used instead of \"र\""
+      }
+    ],
+    "over_aggressive_near_match_rules": [
+      {
+        "word": "शासन",
+        "predicted_label": "incorrect_spelling",
+        "manual_label": "correct_spelling",
+        "reason": "Edit distance match with common Hindi word 'शाम'.",
+        "source": "near_dictionary_match",
+        "suggestion": "शाम",
+        "reviewer_note": "Valid Hindi word meaning \"governance\"; correct spelling"
+      }
+    ]
+  },
+  "q3d_summary": [
+    {
+      "category": "plausible_but_wrong_forms",
+      "count": 18,
+      "why_unreliable": "Some misspellings still look orthographically plausible, so they slip through rule-based checks as false positives.",
+      "example_words": [
+        "नुसार",
+        "अवलेबल",
+        "पोएटरी",
+        "रिजैक्ट",
+        "रजीशों"
+      ]
+    },
+    {
+      "category": "over_aggressive_near_match_rules",
+      "count": 1,
+      "why_unreliable": "Nearest-word matching can force a rare valid word toward a common but wrong dictionary neighbor.",
+      "example_words": [
+        "शासन"
+      ]
+    }
+  ]
+}
