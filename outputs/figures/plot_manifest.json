@@ -1,0 +1,23 @@
+{
+  "q1": [
+    "outputs\\figures\\q1\\q1_wer_progression.png",
+    "outputs\\figures\\q1\\q1_error_taxonomy.png",
+    "outputs\\figures\\q1\\q1_error_severity.png"
+  ],
+  "q2": [
+    "outputs\\figures\\q2\\q2_cleanup_coverage.png",
+    "outputs\\figures\\q2\\q2_cleanup_overlap.png",
+    "outputs\\figures\\q2\\q2_top_english_terms.png"
+  ],
+  "q3": [
+    "outputs\\figures\\q3\\q3_label_distribution.png",
+    "outputs\\figures\\q3\\q3_confidence_by_label.png",
+    "outputs\\figures\\q3\\q3_classification_sources.png",
+    "outputs\\figures\\q3\\q3_low_confidence_audit.png"
+  ],
+  "q4": [
+    "outputs\\figures\\q4\\q4_wer_comparison.png",
+    "outputs\\figures\\q4\\q4_delta_improvement.png",
+    "outputs\\figures\\q4\\q4_improved_cases.png"
+  ]
+}
