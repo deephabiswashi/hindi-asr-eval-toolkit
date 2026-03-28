@@ -306,11 +306,16 @@ def generate_q3_plots(outputs_dir: str | Path, figures_dir: str | Path) -> list[
     )
     fig, ax = plt.subplots(figsize=(8, 6))
     sns.barplot(data=audit_df, x="outcome", y="count", palette=["#54A24B", "#E45756", "#9D9D9D"], ax=ax)
-    ax.set_title("Q3: Manual Audit of Low-Confidence Bucket")
+    fig.suptitle(
+        "Q3: Manual Audit of Low-Confidence Bucket",
+        fontsize=18,
+        fontweight="bold",
+        y=0.98,
+    )
     ax.set_xlabel("")
     ax.set_ylabel("Reviewed Samples")
     subtitle = f"Low-confidence accuracy: {q3_eval['low_confidence_accuracy']:.2%}"
-    ax.text(0.02, 1.02, subtitle, transform=ax.transAxes, fontsize=11, color="#444444")
+    ax.set_title(subtitle, fontsize=11, color="#444444", pad=12, loc="left")
     for patch, value in zip(ax.patches, audit_df["count"]):
         ax.annotate(
             f"{int(value)}",
@@ -321,6 +326,7 @@ def generate_q3_plots(outputs_dir: str | Path, figures_dir: str | Path) -> list[
             textcoords="offset points",
             fontsize=10,
         )
+    fig.subplots_adjust(top=0.84)
     saved_paths.append(save_figure(fig, figures_dir / "q3_low_confidence_audit.png"))
 
     return saved_paths
@@ -384,7 +390,12 @@ def generate_q4_plots(outputs_dir: str | Path, figures_dir: str | Path) -> list[
     if not case_df.empty:
         fig, ax = plt.subplots(figsize=(10, 6))
         sns.barplot(data=case_df, x="model_name", y="improved_cases", palette="crest", ax=ax)
-        ax.set_title("Q4: Number of Utterances Helped by Lattice Scoring")
+        fig.suptitle(
+            "Q4: Number of Utterances Helped by Lattice Scoring",
+            fontsize=18,
+            fontweight="bold",
+            y=0.98,
+        )
         ax.set_xlabel("Model")
         ax.set_ylabel("Improved Utterance Cases")
         info = (
@@ -392,7 +403,7 @@ def generate_q4_plots(outputs_dir: str | Path, figures_dir: str | Path) -> list[
             f"Safeguards: {q4_summary['non_degradation_safeguards_applied']}   "
             f"Avg improvement: {q4_summary['improvement_percent']:.1f}%"
         )
-        ax.text(0.01, 1.02, info, transform=ax.transAxes, fontsize=11, color="#444444")
+        ax.set_title(info, fontsize=11, color="#444444", pad=12, loc="left")
         for patch, value in zip(ax.patches, case_df["improved_cases"]):
             ax.annotate(
                 f"{int(value)}",
@@ -403,6 +414,7 @@ def generate_q4_plots(outputs_dir: str | Path, figures_dir: str | Path) -> list[
                 textcoords="offset points",
                 fontsize=10,
             )
+        fig.subplots_adjust(top=0.84)
         saved_paths.append(save_figure(fig, figures_dir / "q4_improved_cases.png"))
 
     return saved_paths
