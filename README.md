@@ -252,13 +252,6 @@ python scripts/run_q4_pipeline.py --input-csv "C:\Users\admin\Desktop\JoshTalks\
 - The repository keeps `outputs/` versionable so generated results can be inspected or shared.
 - Local raw data and model checkpoints are expected to stay out of Git.
 
-## Recommended GitHub Setup
-
-- Visibility: `Public` only if the task data and outputs do not contain restricted content
-- Add README: `No`, because the repository already includes this `README.md`
-- Add `.gitignore`: `No`, because the repository already includes a project-specific `.gitignore`
-- License: add one only if you want the work to be reusable by others
-
 ## Notes for Reviewers
 
 - This project mixes model training, text post-processing, and evaluation tooling in one repo because it was developed as a research assignment.
